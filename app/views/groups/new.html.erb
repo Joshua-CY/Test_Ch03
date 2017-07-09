@@ -1,23 +1,5 @@
 <div class="col-md-4 col-md-offset-4">
-    <h2>Add Sesssion Board</h2>
+    <h2>新增讨论版</h2>
     <hr>
-    <%= form_for @group do |f| %>
-    
-    <% if @group.errors.any? %>
-    <url>
-        <% @group.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-        <% end %>
-    </url>
-    <% end %>
-    
-    TiTle
-    <%= f.text_field :title %>
-    <br>
-    descript
-    <br>
-    <%= f.text_area :description %>
-    <br>
-    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
-    <% end %>
+    <%= render "form" %>
 </div>
